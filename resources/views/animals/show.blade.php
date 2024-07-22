@@ -21,6 +21,7 @@
                         </div>
                     </div>
                 </article>
+                <button><a class="btn btn-warn" href="{{route("animals.index")}}">Return To INDEX</a></button>
             </div>
         </div>
     </main>
