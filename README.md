@@ -7,15 +7,8 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-
-    Open this repository and click on Use this template ---> Create a new repository
-    Clone the repository wherever you want to develop, e.g. VS Code, VSCodium, ecc.
-    Open the cloned folder with a terminal
-    Copy and paste the .env.example file and rename it into .env without removing the env.example file
-    Run composer install to install all our composer packages
-    Run npm i to install all our npm packages
-    Run php artisan key:generate to generate our custom application key
-    Run on two separeted terminals:
-        run npm run dev to build iteratively our front-end packages and code
-        run php artisan serve to build iteratively our back-end packages and code
-    Start changing the world with your oustanding code!
+Esercizio di oggi: Laravel Base CRUD - Animal Reserve
+nome repo: laravel-base-crudOggi create un nuovo progetto Laravel 10 per gestire una riserva di animali. Milestone 1
+Tramite gli appositi comandi artisan create un model con relativa migration e un resource controller.  Milestone 2
+Iniziate a definire le prime operazioni CRUD con le relative view: - index() - show() dei vari animali presenti in riserva.Bonus:
+Creare il seeder per la tabella animals utilizzando un csv generato magicamente da chatgpt!
