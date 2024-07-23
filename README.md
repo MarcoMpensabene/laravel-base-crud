@@ -8,7 +8,13 @@
 </p>
 
 Esercizio di oggi: Laravel Base CRUD - Animal Reserve
-nome repo: laravel-base-crudOggi create un nuovo progetto Laravel 10 per gestire una riserva di animali. Milestone 1
+create un nuovo progetto Laravel 10 per gestire una riserva di animali. Milestone 1
 Tramite gli appositi comandi artisan create un model con relativa migration e un resource controller.  Milestone 2
 Iniziate a definire le prime operazioni CRUD con le relative view: - index() - show() dei vari animali presenti in riserva.Bonus:
 Creare il seeder per la tabella animals utilizzando un csv generato magicamente da chatgpt!
+
+Laravel Base CRUD - Animal Reserve Parte 2 
+continuiamo nella stessa repo di ieri.
+Definiamo i metodi Create e Store con le relative view dei vari animali presenti in riserva.
+Bonus:
+Creare una semplice modale di conferma in fase di creazione del nuovo record
