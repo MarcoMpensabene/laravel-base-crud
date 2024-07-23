@@ -30,7 +30,7 @@ class AnimalSeeder extends Seeder
         $animalList = Helpers::getCsvData(__DIR__ . "/../../resources/assets/animals.csv");
         foreach ($animalList as $index => $singleAnimal) {
             if ($index > 0) {
-                $animalList = new Animal($singleAnimal);
+                $animalList = new Animal();
                 $animalList->name = $singleAnimal[1];
                 $animalList->species = $singleAnimal[2];
                 $animalList->breed = $singleAnimal[3];
