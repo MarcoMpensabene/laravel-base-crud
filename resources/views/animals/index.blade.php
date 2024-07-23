@@ -34,7 +34,9 @@
                                 <th style="width: 15%">{{$animal->image_url}}</th>
                                 <th>{{$animal->weight}}</th>
                                 <th >{{$animal->description}}</th>
-                                <th><a class="btn btn-primary btn-sm" href={{route("animals.show" , $animal)}}>View</a></th>
+                                <th >
+                                    <a class="btn btn-primary btn-sm" href={{route("animals.show" , $animal)}}>View</a>
+                                </th>
                             </tr>
                         @endforeach
                         </tbody>
