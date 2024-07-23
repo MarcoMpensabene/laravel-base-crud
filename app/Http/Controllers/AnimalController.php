@@ -30,7 +30,18 @@ class AnimalController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        $data = $request->all();
+        $newAnimal = new Animal();
+        $newAnimal->name = $data["name"];
+        $newAnimal->species = $data["species"];
+        $newAnimal->breed = $data["breed"];
+        $newAnimal->image_url = $data["image_url"];
+        $newAnimal->weight = $data["weight"];
+        $newAnimal->description = $data["description"];
+        $newAnimal->save();
+        // > dd($newAnimal); Testiamo se è tutto corretto
+
+        return redirect()->route('animals.show', $newAnimal);
     }
 
     /**
