@@ -31,14 +31,15 @@ class AnimalSeeder extends Seeder
         foreach ($animalList as $index => $singleAnimal) {
             if ($index > 0) {
                 $animalList = new Animal($singleAnimal);
-                // $animalList->name = $singleAnimal[1];
-                // $animalList->species = $singleAnimal[2];
-                // $animalList->breed = $singleAnimal[3];
-                // $animalList->image_url = $singleAnimal[4];
-                // $animalList->weight = $singleAnimal[5];
-                // $animalList->description = $singleAnimal[6];
-                // $animalList->created_at = $singleAnimal[7];
-                // $animalList->updated_at  = $singleAnimal[8];
+                $animalList->name = $singleAnimal[1];
+                $animalList->species = $singleAnimal[2];
+                $animalList->breed = $singleAnimal[3];
+                $animalList->image_url = $singleAnimal[4];
+                $animalList->weight = $singleAnimal[5];
+                $animalList->description = $singleAnimal[6];
+                $animalList->created_at = $singleAnimal[7];
+                $animalList->updated_at  = $singleAnimal[8];
+                //dd($singleAnimal);
                 $animalList->save();
             }
         }

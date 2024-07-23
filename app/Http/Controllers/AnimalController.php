@@ -31,16 +31,16 @@ class AnimalController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        $newAnimal = new Animal($data);
+        $newAnimal = new Animal($data); // Mass assignment
         // $newAnimal->name = $data["name"];
         // $newAnimal->species = $data["species"];
-        // $newAnimal->breed = $data["breed"];
+        // $newAnimal->breed = $data["breed"];  Mano
         // $newAnimal->image_url = $data["image_url"];
         // $newAnimal->weight = $data["weight"];
         // $newAnimal->description = $data["description"];
         $newAnimal->save();
         // > dd($newAnimal); Testiamo se è tutto corretto
-
+        // ? dd($data);
         return redirect()->route('animals.show', $newAnimal);
     }
 
