@@ -1,7 +1,7 @@
 
 @extends('layouts.app')
 
-@section('page-title' , 'Home')
+@section('page-title' , 'Show')
 
 @section('main-content')
 
@@ -10,6 +10,12 @@
         <div class="container">
             <div class="row">
                 <article class="col-12">
+                    @if (session("message"))
+                        <div class="alert alert-succes">
+                            {{session("message")}}
+                        </div>
+
+                    @endif
                     <div class="card w-100">
                         <img src="{{$animal->image_url}}" class="card-img-top " alt="{{$animal->name}}" style="max-height: 600px; object-fit: contain;" >
                         <div class="card-body">
@@ -27,4 +33,8 @@
     </main>
 
 
+@endsection
+
+@section('custom-scripts')
+    @vite('resources/js/add-confirm.js')
 @endsection

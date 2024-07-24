@@ -34,8 +34,16 @@
                                 <th style="width: 15%">{{$animal->image_url}}</th>
                                 <th>{{$animal->weight}}</th>
                                 <th >{{$animal->description}}</th>
-                                <th >
-                                    <a class="btn btn-primary btn-sm" href={{route("animals.show" , $animal)}}>View</a>
+                                <th>
+                                    <div class="d-flex">
+                                        <a class="btn btn-primary btn-sm me-1" href={{route("animals.show" , $animal)}}>View</a>
+                                        <a class="btn btn-primary btn-sm me-1" href="{{route("animals.edit" , $animal)}}">Edit</a>
+                                        <form action="#" method="POST">
+                                            @method("DELETE")
+                                            @csrf
+                                            <button type="submit" class="btn btn-danger">Delete</button>
+                                        </form>
+                                    </div>
                                 </th>
                             </tr>
                         @endforeach
