@@ -63,9 +63,12 @@ class AnimalController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Animal $animal)
     {
-        //
+        // dd($request->all());
+        $data = $request->all();
+        $animal->update($data);
+        return redirect()->route('animals.show', $animal);
     }
 
     /**

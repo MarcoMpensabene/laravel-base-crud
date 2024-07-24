@@ -15,8 +15,8 @@
                     Edit {{$animal->name}}
                 </h1>
 
-                <form action="{{route('animals.store')}}" method="POST" id="add-form">
-
+                <form action="{{route('animals.update' , $animal)}}" method="POST" id="add-form">
+                    @method('PUT')
                     @csrf
                     <div class="mb-3">
                         <label for="name">Nome</label>
@@ -49,8 +49,8 @@
                         <textarea class="form-control form-control-sm" placeholder="Descrizione dell'animale" aria-label="Descrizione dell'animale" name="description" id="description">{{$animal->description}}</textarea>
                     </div>
 
-                    <div class="mb-3 d-flex justify-content-between p-2">
-                        <input type="submit" value="Create new Animal" class="btn btn-primary" >
+                    <div class="mb-3 d-flex justify-content-between ">
+                        <input type="submit" value="Edit {{$animal->name}}" class="btn btn-primary " >
                         <input type="reset" value="Reset" class="btn btn-danger">
                     </div>
                     </div>

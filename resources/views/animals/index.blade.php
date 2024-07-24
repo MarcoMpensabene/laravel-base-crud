@@ -10,7 +10,7 @@
 
         <div class="container">
             <div class="row">
-                <article class="col-12 table-responsive">
+                <article class="col-12">
                     <table class="table align-middle table-striped table-hover">
                         <thead>
                             <tr>
@@ -27,12 +27,12 @@
                         <tbody class="table-group-divider">
                         @foreach ($animals as $animal)
                             <tr>
-                                <th>{{$animal->id}}</th>
-                                <th>{{$animal->name}}</th>
-                                <th>{{$animal->species}}</th>
-                                <th>{{$animal->breed}}</th>
-                                <th style="width: 15%">{{$animal->image_url}}</th>
-                                <th>{{$animal->weight}}</th>
+                                <th >{{$animal->id}}</th>
+                                <th >{{$animal->name}}</th>
+                                <th >{{$animal->species}}</th>
+                                <th >{{$animal->breed}}</th>
+                                <th >{{$animal->image_url}}</th>
+                                <th >{{$animal->weight}}</th>
                                 <th >{{$animal->description}}</th>
                                 <th>
                                     <div class="d-flex">
