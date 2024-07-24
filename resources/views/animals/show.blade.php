@@ -11,7 +11,7 @@
             <div class="row">
                 <article class="col-12">
                     @if (session("message"))
-                        <div class="alert alert-succes">
+                        <div class="alert alert-success">
                             {{session("message")}}
                         </div>
 
@@ -27,7 +27,7 @@
                         </div>
                     </div>
                 </article>
-                <button><a class="btn btn-warn" href="{{route("animals.index")}}">Return To INDEX</a></button>
+                <a class="btn btn-success w-25 mt-2 m-auto" href="{{route("animals.index")}}">Return To INDEX</a>
             </div>
         </div>
     </main>

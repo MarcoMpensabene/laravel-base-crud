@@ -11,6 +11,12 @@
         <div class="container">
             <div class="row">
                 <article class="col-12">
+                    @if (session("message"))
+                    <div class="alert alert-primary">
+                        {{session("message")}}
+                    </div>
+
+                @endif
                     <table class="table align-middle table-striped table-hover">
                         <thead>
                             <tr>
@@ -38,7 +44,7 @@
                                     <div class="d-flex">
                                         <a class="btn btn-primary btn-sm me-1" href={{route("animals.show" , $animal)}}>View</a>
                                         <a class="btn btn-warning btn-sm me-1" href="{{route("animals.edit" , $animal)}}">Edit</a>
-                                        <form action="{{route("animals.destroy" , $animal)}}" method="POST">
+                                        <form action="{{route("animals.destroy" , $animal)}}" method="POST" class="delete-form">
                                             @method("DELETE")
                                             @csrf
                                             <button type="submit" class="btn btn-danger">Delete</button>
@@ -52,10 +58,11 @@
                 </article>
             </div>
         </div>
+        {{-- @dump($animals) --}}
+</main>
 
+@endsection
 
-
-         {{-- @dump($animals) --}}
-    </main>
-
+@section('custom-scripts')
+    @vite('resources/js/delete-confirm.js')
 @endsection
