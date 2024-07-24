@@ -37,8 +37,8 @@
                                 <th>
                                     <div class="d-flex">
                                         <a class="btn btn-primary btn-sm me-1" href={{route("animals.show" , $animal)}}>View</a>
-                                        <a class="btn btn-primary btn-sm me-1" href="{{route("animals.edit" , $animal)}}">Edit</a>
-                                        <form action="#" method="POST">
+                                        <a class="btn btn-warning btn-sm me-1" href="{{route("animals.edit" , $animal)}}">Edit</a>
+                                        <form action="{{route("animals.destroy" , $animal)}}" method="POST">
                                             @method("DELETE")
                                             @csrf
                                             <button type="submit" class="btn btn-danger">Delete</button>
