@@ -81,5 +81,25 @@ class AnimalController extends Controller
     {
         $animal->delete();
         return redirect()->route('animals.index')->with('message', "N:" . $animal->id . " " . $animal->name . " Has Been Deleted");
-    }                                               //with ci permette di inviare il value di message così possiamo visualizzarlo dopo avere cliccato DELETE
+    }                                             //with ci permette di inviare il value di message così possiamo visualizzarlo dopo avere cliccato DELETE
+
+    public function deletedIndex()
+    {
+        $animals = Animal::onlyTrashed()->get();
+        return view('animals.deleted-index', compact('animals'));
+    }
+
+    public function restore(string $id)
+    {
+        $animal = Animal::onlyTrashed()->findOrFail($id);
+        $animal->restore();
+        return redirect()->route('animals.deleted-index')->with('message', $animal->name . " Has Been Restored");
+    }
+
+    public function permanentDelete(string $id)
+    {
+        $animal = Animal::onlyTrashed()->findOrFail($id);
+        $animal->forceDelete();
+        return redirect()->route('animals.deleted-index')->with('message', $animal->name . " Has Been Permanently Removed");
+    }
 }
