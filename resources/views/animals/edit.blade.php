@@ -14,6 +14,17 @@
                 <h1 class="text-center mb-3 fw-bold">
                     Edit {{$animal->name}}
                 </h1>
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{$error}}</li>
+                        @endforeach
+
+                    </ul>
+                </div>
+
+                @endif
 
                 <form action="{{route('animals.update' , $animal)}}" method="POST" id="add-form">
                     @method('PUT')

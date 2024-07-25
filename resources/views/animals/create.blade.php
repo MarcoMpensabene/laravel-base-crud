@@ -10,6 +10,17 @@
                 <h1 class="text-center mb-3 fw-bold">
                     Add new Animal
                 </h1>
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{$error}}</li>
+                        @endforeach
+
+                    </ul>
+                </div>
+
+                @endif
 
                 <form action="{{route('animals.store')}}" method="POST" id="add-form">
                     {{-- @method('PUT/FETCH/DELETE/ETC')  dobbiamo utilizzare SE LA CHIAMATA NON è POST o GET  --}}
