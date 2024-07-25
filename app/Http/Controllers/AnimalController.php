@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\EditRequest;
 use App\Http\Requests\StoreRequest;
 use App\Models\Animal;
 use Illuminate\Http\Request;
@@ -65,10 +66,10 @@ class AnimalController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Animal $animal)
+    public function update(EditRequest $request, Animal $animal)
     {
         // dd($request->all());
-        $data = $request->all(); //richiedo tutti i dati
+        $data = $request->validated(); //richiedo tutti i dati
         $animal->update($data); // modifico i dati del singolo animale attraverso il mio form con i value già presenti
         return redirect()->route('animals.show', $animal)->with('message', $animal->name . " Has Been Edited");
     }                                                     //with ci permette di inviare il value di message così possiamo visualizzarlo dopo avere cliccato UPDATE
