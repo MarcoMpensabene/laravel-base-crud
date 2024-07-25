@@ -18,3 +18,14 @@ continuiamo nella stessa repo di ieri.
 Definiamo i metodi Create e Store con le relative view dei vari animali presenti in riserva.
 Bonus:
 Creare una semplice modale di conferma in fase di creazione del nuovo record
+
+Laravel Base CRUD - Animal Reserve Parte 3
+Definiamo i metodi edit(), update()  e delete() con le relative view dei vari animali presenti in riserva.
+Bonus:
+Creare una semplice modale di conferma in fase di creazione, modifica e soprattutto in fase di cancellazione
+
+Laravel Base CRUD - Animal Reserve Parte 4
+Definiamo la validazione di tutti i metodi con input e le relative view (con i metodi old e gli errori da visualizzare) per i vari animali presenti in riserva.
+Bonus: 
+Aggiungiamo la funzionalita' di softdelete
+Aggiungiamo le rotte e le view necessarie a gestire un cestino
