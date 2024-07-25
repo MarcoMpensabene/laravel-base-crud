@@ -1,12 +1,12 @@
 
 @extends('layouts.app')
 
-@section('page-title' , 'Home')
+@section('page-title' , 'DELETED ANIMAL INDEX')
 
 @section('main-content')
 
     <main>
-         <h1 class="text-center">ANIMAL INDEX</h1>
+         <h1 class="text-center">DELETED ANIMAL INDEX</h1>
 
         <div class="container">
             <div class="row">
@@ -42,10 +42,10 @@
                                 <th >{{$animal->description}}</th>
                                 <th>
                                     <div class="d-flex">
-                                        <form action="{{route("animals.restore" , $animal)}}" method="POST" class="delete-form">
+                                        <form action="{{route("animals.restore" , $animal)}}" method="POST" class="me-2">
                                             @method("PATCH")
                                             @csrf
-                                            <button type="submit" class="btn btn-primary">Restore</button>
+                                            <button type="submit" class="btn btn-success">Restore</button>
                                         </form>
                                         <form action="{{route("animals.permanent-delete" , $animal )}}" method="POST" class="delete-form">
                                             @method("DELETE")
